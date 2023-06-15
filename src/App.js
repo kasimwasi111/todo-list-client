@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import ToDo from "./components/ToDo";
 import { addToDo, getAllToDo, updateToDo, deleteToDo } from "./utils/HandleApi";
-import { AiOutlinePlusCircle } from "react-icons/ai";
-import { BsPencilSquare } from "react-icons/Bs";
 
 
 function App() {
@@ -43,7 +41,7 @@ function App() {
                 : () => addToDo(text, setText, setToDo)
             }
           >
-            {isUpdating ? <BsPencilSquare className="icon"/> : <AiOutlinePlusCircle className="icon"/>}
+            {isUpdating ? "Update" : "Add +"}
           </div>
         </div>
 
